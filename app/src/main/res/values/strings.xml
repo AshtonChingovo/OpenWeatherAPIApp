@@ -1,0 +1,80 @@
+<resources>
+    <string name="app_name">DVTOpenWeather</string>
+
+    <string name="open_weather_base_url">https://api.openweathermap.org/data/2.5/</string>
+    <string name="google_places_base_url">https://maps.googleapis.com/maps/api/place/textsearch/</string>
+
+    <string name="allow_precise_location_permission">Allow precise location</string>
+    <string name="allow_permissions">Allow Permissions</string>
+    <string name="ready_to_go">All set and good to go</string>
+    <string name="almost_ready_to_go">All set and good to go</string>
+    <string name="permissions_rationale">"This application requires location permissions to deliver the best experience"</string>
+    <string name="thank_you_for_granting_permissions">Thank you for granting location permissions</string>
+
+    <string name="forecast_time_dialog_label">Forecast Time</string>
+    <string name="forecast_time_dialog_description">This is the time for the forecast details for all the days present on the list. \n\n The app will automatically get the latest forecast every 10 mins if you are online</string>
+
+    <string name="fetching_forecast">Fetching Forecasts</string>
+    <string name="fetching_forecast_message">This will only a sec, hold tight</string>
+    <string name="saved_forecasts">Saved Forecasts</string>
+    <string name="saved_forecasts_message">The latest saved forecast will show here, currently there is none but lets try get something</string>
+    <string name="forecasts_fetch_failed">Failed to fetch forecasts</string>
+    <string name="forecasts_fetch_failed_message">There was a problem fetching your forecasts, try again ?</string>
+    <string name="no_connection">Seems you are offline</string>
+    <string name="no_connection_message">Please get connected to an active connection, try again ?</string>
+    <string name="saved_locations">Saved locations</string>
+    <string name="saved_locations_message">The latest saved locations will show here, currently there is none </string>
+
+    <string name="home">Home</string>
+    <string name="favourites">Favourites</string>
+    <string name="map">Map</string>
+    <string name="home_screen">home</string>
+    <string name="favourites_screen">favourites</string>
+    <string name="map_screen">map</string>
+    <string name="about_screen">about</string>
+    <string name="title_activity_home">Home</string>
+
+    <string name="minimum_temperature">min</string>
+    <string name="current_temperature">current</string>
+    <string name="maximum_temperature">max</string>
+    <string name="internet_connection_unavailable">⚠️      No internet connection found</string>
+    <string name="retry">Retry</string>
+    <string name="open_weather">Open Weather API</string>
+    <string name="jetpack_compose">Jetpack Compose</string>
+    <string name="kotlin">Kotlin</string>
+    <string name="jetpack">Jetpack</string>
+    <string name="data_fetch_failed">Fetching Google places information failed</string>
+    <string name="maps_dialog_data_fetch_failed">Fetching Forecast Failed</string>
+    <string name="maps_dialog_data_fetch_failed_message">Fetching Forecast details operation failed</string>
+
+    <string name="maps_dialog_current_temperature">Curr Temp</string>
+    <string name="maps_dialog_max_temperature">Max Temp</string>
+    <string name="maps_dialog_min_temperature">Min Temp</string>
+    <string name="maps_dialog_humidity">Humidity</string>
+    <string name="maps_dialog_country">Country</string>
+
+    <string name="setting_up_map">Setting Up</string>
+    <string name="setting_up_map_message">Getting your Map just a moment</string>
+
+    <string name="rainy">Rain</string>
+    <string name="clouds">Clouds</string>
+
+    <string name="map_top_message">Click on the Marker to get the latest weather forecast for that position</string>
+    <string name="current_forecast_label">Current Forecast</string>
+    <string name="current_weather_label">Current Weather</string>
+    <string name="week_forecast_label">Week\'s Forecast</string>
+    <string name="forecast_time_label">Forecast time</string>
+    <string name="more_label">MORE</string>
+
+    <string name="location_label">Location</string>
+    <string name="locations_label">Locations</string>
+    <string name="google_places_label">Google Places Details</string>
+
+    <string name="google_places_address_label">Address</string>
+    <string name="google_places_coordinates_label">Coordinates</string>
+    <string name="google_places_place_name_label">Place Name</string>
+
+    <string name="open_weather_label">OpenWeather</string>
+    <string name="assignment_label">DVT mobile weather app assessment - Android(Kotlin)</string>
+    <string name="features_label">Features</string>
+</resources>

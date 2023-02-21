@@ -89,16 +89,19 @@ class HomeViewModel @Inject constructor(
                                 openWeatherAPIKEY
                             )
 
-                            // parse the list to local ForecastEntities & add to repository
-                            insertForecastsUseCase(getFilteredForecastsLists(forecastsList))
+                            if(forecastsList != null){
+                                // parse the list to local ForecastEntities & add to repository
+                                insertForecastsUseCase(getFilteredForecastsLists(forecastsList))
 
-                            // update the protoDataStore to the current date for last successful update
-                            val date = LocalDateTime.now().format(DateTimeFormatter.ofPattern(STANDARD_DATE_FORMAT))
-                            protoDataStore.updateData {store ->
-                                store.toBuilder()
-                                    .setLatestSuccessfulUpdate(date)
-                                    .build()
+                                // update the protoDataStore to the current date for last successful update
+                                val date = LocalDateTime.now().format(DateTimeFormatter.ofPattern(STANDARD_DATE_FORMAT))
+                                protoDataStore.updateData {store ->
+                                    store.toBuilder()
+                                        .setLatestSuccessfulUpdate(date)
+                                        .build()
+                                }
                             }
+
                         }
                     }
                 }
@@ -131,7 +134,7 @@ class HomeViewModel @Inject constructor(
             }
             // remove from list
             else{
-                locationsRepository.deleteLocation(forecast.id)
+                locationsRepository.deleteLocationById(forecast.id)
             }
         }
     }

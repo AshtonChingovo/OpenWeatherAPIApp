@@ -10,9 +10,11 @@ class GetCurrentWeatherForecastUseCase @Inject constructor(
     @APIKeysModule.OpenWeatherAPIKEY var openWeatherAPIKEY: String
 ){
 
-    suspend operator fun invoke(latitude: Double, longitude: Double): ForecastEntity{
+    suspend operator fun invoke(latitude: Double, longitude: Double): ForecastEntity? {
 
+        // a return of null means the api data fetch failed
         var currentForecast = openWeatherForecastData.fetchCurrentWeatherForecast(latitude, longitude, openWeatherAPIKEY)
+            ?: return null
 
         return ForecastEntity(
             id = 0,

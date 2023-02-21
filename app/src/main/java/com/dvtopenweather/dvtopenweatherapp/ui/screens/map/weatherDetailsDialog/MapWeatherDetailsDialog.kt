@@ -56,7 +56,10 @@ fun MapWeatherDetailsDialog(
             }
         },
         text = {
-               Column(modifier = Modifier.wrapContentHeight()) {
+               Column(
+                   verticalArrangement = Arrangement.Center,
+                   modifier = Modifier.wrapContentHeight()
+               ) {
                    when(currentWeatherForecastState.value){
                        DialogUIState.Loading -> MessageUI(
                            imageResourceId = R.drawable.forest_rainy,
@@ -79,7 +82,7 @@ fun MapWeatherDetailsDialog(
                            imageResourceId = R.drawable.caution,
                            heading = stringResource(id = R.string.maps_dialog_data_fetch_failed),
                            message = stringResource(id = R.string.maps_dialog_data_fetch_failed_message),
-                           showLoadingAnimation = true,
+                           showLoadingAnimation = false,
                            showRetryButton = true,
                            // retry fetch operation
                            onClick = {weatherDetailsDialogViewModel.fetchCurrentLocationWeatherForecast(latitude, longitude)}

@@ -10,7 +10,7 @@ class InsertForecastsUseCase @Inject constructor(
 ){
 
     // parse object to local ForecastEntity type
-    suspend operator fun invoke(fiveDayForecastResource: OpenWeatherFiveDayForecastResource){
+    operator fun invoke(fiveDayForecastResource: OpenWeatherFiveDayForecastResource){
 
         var forecasts:List<ForecastEntity> = fiveDayForecastResource.forecast.map { openWeather ->
             ForecastEntity(
@@ -31,11 +31,10 @@ class InsertForecastsUseCase @Inject constructor(
                 isFavourite = false
             )
 
-
-
         }
 
         forecastsRepository.insertForecasts(forecasts)
 
     }
+
 }

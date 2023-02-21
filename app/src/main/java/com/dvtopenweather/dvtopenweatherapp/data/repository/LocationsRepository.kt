@@ -7,9 +7,9 @@ interface LocationsRepository {
 
     fun insertLocation(location: LocationEntity)
 
-    fun deleteLocation(id: Int)
+    fun deleteLocationById(id: Int)
 
-    fun deleteLocation(location: LocationEntity)
+    fun deleteLocationById(location: LocationEntity)
 
     fun getLocations(): Flow<List<LocationEntity>>
 

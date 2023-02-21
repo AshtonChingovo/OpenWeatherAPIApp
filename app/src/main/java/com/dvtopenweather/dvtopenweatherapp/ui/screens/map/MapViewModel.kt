@@ -137,7 +137,11 @@ class MapViewModel@Inject constructor(
 
                     var currentForecastEntity = getCurrentWeatherForecastUseCase(latitude = latitude, longitude = longitude)
 
-                    dialogUIState.emit(DialogUIState.Success(currentWeatherForecast = currentForecastEntity))
+                    if(currentForecastEntity != null)
+                        dialogUIState.emit(DialogUIState.Success(currentWeatherForecast = currentForecastEntity))
+                    else
+                        dialogUIState.emit(DialogUIState.Failed)
+
 
                 }
                 else

@@ -45,7 +45,7 @@
     <string name="jetpack">Jetpack</string>
     <string name="data_fetch_failed">Fetching Google places information failed</string>
     <string name="maps_dialog_data_fetch_failed">Fetching Forecast Failed</string>
-    <string name="maps_dialog_data_fetch_failed_message">Fetching Forecast details operation failed</string>
+    <string name="maps_dialog_data_fetch_failed_message">Fetching Forecast details operation failed \n Please check if the API Key for OpenWeather has been set</string>
 
     <string name="maps_dialog_current_temperature">Curr Temp</string>
     <string name="maps_dialog_max_temperature">Max Temp</string>

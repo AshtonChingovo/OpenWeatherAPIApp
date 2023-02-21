@@ -51,7 +51,7 @@ class FavouritesViewModel @Inject constructor(
 
     fun deleteLocation(location: LocationEntity){
         viewModelScope.launch(ioDispatcher) {
-            locationsRepository.deleteLocation(location)
+            locationsRepository.deleteLocationById(location)
             // update value for forecast as well
             forecastsRepository.updateForecastIsFavourite(false, location.forecastEntityId)
         }

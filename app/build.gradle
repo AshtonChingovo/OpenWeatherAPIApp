@@ -63,6 +63,8 @@ dependencies {
     def okhttp_interceptor_version = "4.10.0"
     def nav_version = "2.5.3"
 
+    def coroutines_version = "1.6.4"
+
     implementation "androidx.datastore:datastore:$datastore_version"
     implementation  "com.google.protobuf:protobuf-javalite:$protobuf_version"
 
@@ -111,6 +113,8 @@ dependencies {
     androidTestImplementation "androidx.compose.ui:ui-test-junit4:$compose_ui_version"
     debugImplementation "androidx.compose.ui:ui-tooling:$compose_ui_version"
     debugImplementation "androidx.compose.ui:ui-test-manifest:$compose_ui_version"
+
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutines_version"
 
 }
 

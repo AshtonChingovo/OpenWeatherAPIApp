@@ -21,12 +21,18 @@ class OpenWeatherForecastDataImpl @Inject constructor(
         latitude: Double,
         longitude: Double,
         apiKey: String
-    ): OpenWeatherCurrentWeatherForecastResource {
-        return openWeatherForecastAPI.currentWeatherForecast(
-            latitude = latitude,
-            longitude = longitude,
-            apiKey
-        )
+    ): OpenWeatherCurrentWeatherForecastResource? {
+        return try {
+            openWeatherForecastAPI.currentWeatherForecast(
+                latitude = latitude,
+                longitude = longitude,
+                apiKey
+            )
+        }
+        catch (e: java.lang.Exception){
+            null
+        }
+
     }
 
     @RequiresApi(Build.VERSION_CODES.O)
@@ -34,13 +40,19 @@ class OpenWeatherForecastDataImpl @Inject constructor(
         latitude: String,
         longitude: String,
         apiKey: String
-    ): OpenWeatherFiveDayForecastResource {
-        return openWeatherForecastAPI.fiveDayWeatherForecast(
-            latitude = latitude,
-            longitude = longitude,
-            units = OPEN_WEATHER_DATA_UNITS,
-            apiKey = apiKey
-        )
+    ): OpenWeatherFiveDayForecastResource? {
+        return try{
+            openWeatherForecastAPI.fiveDayWeatherForecast(
+                latitude = latitude,
+                longitude = longitude,
+                units = OPEN_WEATHER_DATA_UNITS,
+                apiKey = apiKey
+            )
+        }
+        catch (e: Exception){
+            null
+        }
+
     }
 
 

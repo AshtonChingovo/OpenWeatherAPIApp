@@ -9,12 +9,12 @@ interface OpenWeatherForecastData {
         latitude: Double,
         longitude: Double,
         apiKey: String
-    ): OpenWeatherCurrentWeatherForecastResource
+    ): OpenWeatherCurrentWeatherForecastResource?
 
     suspend fun fiveDayWeatherForecast(
         latitude: String,
         longitude: String,
         apiKey: String
-    ): OpenWeatherFiveDayForecastResource
+    ): OpenWeatherFiveDayForecastResource?
 
 }

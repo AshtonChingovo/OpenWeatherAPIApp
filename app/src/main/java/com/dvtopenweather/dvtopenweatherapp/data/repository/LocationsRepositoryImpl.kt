@@ -13,11 +13,11 @@ class LocationsRepositoryImpl @Inject constructor(
         locationsDao.insertLocation(location)
     }
 
-    override fun deleteLocation(id: Int) {
+    override fun deleteLocationById(id: Int) {
         locationsDao.deleteLocation(id)
     }
 
-    override fun deleteLocation(location: LocationEntity) {
+    override fun deleteLocationById(location: LocationEntity) {
         locationsDao.deleteLocation(location)
     }
 

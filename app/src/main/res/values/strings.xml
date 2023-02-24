@@ -77,4 +77,8 @@
     <string name="open_weather_label">OpenWeather</string>
     <string name="assignment_label">DVT mobile weather app assessment - Android(Kotlin)</string>
     <string name="features_label">Features</string>
+
+    <string name="location_settings_label">Location Settings</string>
+    <string name="location_settings_message_label">For the best experience please switch on your location settings and click RETRY</string>
+
 </resources>

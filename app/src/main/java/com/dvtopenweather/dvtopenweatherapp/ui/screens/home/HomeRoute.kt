@@ -1,6 +1,7 @@
 package com.dvtopenweather.dvtopenweatherapp.ui.screens.home
 
 import android.os.Build
+import android.util.Log
 import androidx.annotation.RequiresApi
 import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.*
@@ -26,12 +27,10 @@ import com.dvtopenweather.dvtopenweatherapp.R
 import com.dvtopenweather.dvtopenweatherapp.data.repository.model.ForecastEntity
 import com.dvtopenweather.dvtopenweatherapp.ui.LocationSettingsUIState
 import com.dvtopenweather.dvtopenweatherapp.ui.LocationSettingsViewModel
+import com.dvtopenweather.dvtopenweatherapp.ui.screens.LocationSettingsOff
 import com.dvtopenweather.dvtopenweatherapp.ui.screens.util.MessageUI
 import com.dvtopenweather.dvtopenweatherapp.ui.theme.*
-import com.dvtopenweather.dvtopenweatherapp.util.CLOUDS
-import com.dvtopenweather.dvtopenweatherapp.util.RAIN
-import com.dvtopenweather.dvtopenweatherapp.util.STANDARD_DATE_FORMAT
-import com.dvtopenweather.dvtopenweatherapp.util.STANDARD_DATE_FORMAT_SECONDS
+import com.dvtopenweather.dvtopenweatherapp.util.*
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 
@@ -48,6 +47,8 @@ fun HomeRoute(
     locationSettingsViewModel.checkLocationSettings()
 
     var locationSettingsState = locationSettingsViewModel.locationSettingsUIState.collectAsStateWithLifecycle()
+
+    Log.d("UIState", " HomeUIState :: ${locationSettingsState.value}")
 
     if (locationSettingsState.value == LocationSettingsUIState.LocationSettingsON) {
         when(homeUIState.value){
@@ -89,7 +90,7 @@ fun HomeRoute(
             }
         }
     } else {
-        // LocationSettingsOff(onClick = locationSettingsViewModel::checkLocationSettings)
+        LocationSettingsOff(onClick = locationSettingsViewModel::checkLocationSettings)
     }
 
 }
@@ -361,8 +362,8 @@ fun WeatherForecastSectionItems(forecast: ForecastEntity) {
 fun gradientBrush(weather: String): Brush {
 
     return when(weather){
-        "Rain" -> Brush.verticalGradient(listOf(Rainy, Rainy, RainyDark))
-        "Clouds" -> Brush.verticalGradient(listOf(Cloudy, Cloudy, CloudyDark))
+        RAIN -> Brush.verticalGradient(listOf(Rainy, Rainy, RainyDark))
+        CLOUDS -> Brush.verticalGradient(listOf(Cloudy, Cloudy, CloudyDark))
         else -> Brush.verticalGradient(listOf(Sunny, Sunny, SunnyDark))
     }
 

@@ -1,7 +1,7 @@
 # OpenWeather App
 Android app that consumes the OpenWeatherAPI built using Jetpack Compose. This is my very first Jetpack Compose android app, hope you find it okay, it was a tough, quick and interesting learning experience but worth it.
 
-Some Screen shots from the app :) 
+Some screenshots from the app :) 
 * NOTE: Please add your own Google Places & OpenWeather API Keys to the local.properties file.
 
 Unfortunately some tasks were not completed or done perfectly because of assignment submission deadline constraints but I tried my best to do all I could.

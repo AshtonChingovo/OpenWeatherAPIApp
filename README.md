@@ -3,7 +3,9 @@ Android app that consumes the OpenWeatherAPI built using Jetpack Compose. This i
 
 Some screenshots from the app :) 
 * NOTE: Please add your own Google Places & OpenWeather API Keys to the local.properties file with the following respective variable names
+
 GOOGLE_MAPS_API_KEY=
+
 OPEN_WEATHER_API_KEY=
 
 

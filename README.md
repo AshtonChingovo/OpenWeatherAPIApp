@@ -3,7 +3,7 @@
 OpenWeather app is an android weather application that displays a five day weather forecast starting on the current day. It uses your current location to show you the most relevant forecast within your current location area.
 
 # Features
-Features included in the app include allowing the user to save locations that can be viewed offline, a map with a pin of your current precise location with the added option of viewing added weather information for where you precisely are. Google Places API integration to get details of saved locations. The 5 day forecast features the weather details that include the min, current and max expected temperatures of that day
+Features in the app include allowing the user to save locations that can be viewed offline, a map with a pin of the user's current precise location with the added option of viewing additional weather information for where the user precisely is. Google Places API integration to get details of saved locations. The 5 day forecast features the weather details that include the min, current and max expected temperatures of that day
 
 # Screenshots 
 

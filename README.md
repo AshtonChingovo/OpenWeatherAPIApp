@@ -19,6 +19,7 @@ Main tools used in building this app include
 * Hilt
 * Room 
 * Retrofit
+* Koltin Flows
 * Junit 
 
 # Architecture 
